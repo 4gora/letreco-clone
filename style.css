@@ -9,12 +9,82 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1, red;
-    background-color: #33b;
+    background-color: #aaa;
 }
 
-#wrapper {
-    background-color: red;
-
+#display {
+    background-color: #F4F3F1;
+    height: 720px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
+#quadradosDiv {
+    width: 280px;
+    height: 330px;
+    display: grid;
+    grid-template-columns: repeat(5, 48px);
+    gap: 16px 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadrado {
+    border: 1px solid black;
+    border-radius: 4px;
+    width: auto;
+    height: 40px;
+}
+
+#apagarConfirmar {
+    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+    button {
+        width: 81px;
+        height: 36px;
+    }
+    svg {
+        width: 24px;
+        height: 24px;
+        color: #AEAEAD;
+    
+    }
+    :hover {
+        cursor: pointer;
+    }
+}
+
+#teclado {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tecladoDiv {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+}
+
+
+.tecla {
+    width: 32px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+.tecla:hover {
+    cursor: pointer;
+    background-color: #f7f4f4;
+
+}
