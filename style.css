@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 body {
@@ -10,6 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #aaa;
+
 }
 
 #display {
@@ -37,6 +40,11 @@ body {
     border-radius: 4px;
     width: auto;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 #apagarConfirmar {
