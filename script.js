@@ -1,5 +1,3 @@
-import palavras from "./palavras.js";
-
 document.addEventListener("DOMContentLoaded", () => {
   const quadrados = document.querySelectorAll(".quadrado");
   const teclas = document.querySelectorAll(".tecla");
@@ -15,8 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let verde = "rgb(0, 128, 0)";
   let vermelho = "rgb(255, 0, 0)";
 
-  const palavraSecreta =
-    palavras[Math.floor(Math.random() * palavras.length)].toUpperCase();
+  let palavraSecreta = ""
+
+  async function carregarPalavras() {
+    const response = await fetch('palavras.txt')
+    const data = await response.text()
+    const palavras = data.split('\n').map(palavra => palavra.trim().toUpperCase())
+    palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)]
+  }
+
+  carregarPalavras()
 
   function adicionarLetra(letra) {
     if (colunaAtual < 5) {
